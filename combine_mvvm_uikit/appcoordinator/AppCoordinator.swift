@@ -13,8 +13,36 @@ import Factory
 class AppCoordinator {
     let navigationController = Container.navigationController()
 
-    func showInitial() {
+    private var cancellables = Set<AnyCancellable>()
+
+    func navigate(_ state: AppCoordinatorState) {
+        switch state {
+        case .login:
+            showLogin()
+        case .home:
+            showHome()
+        }
+    }
+
+    private func showHome() {
         let viewController = HomeViewController()
-        navigationController.pushViewController(viewController, animated: false)
+
+        pushToRoot(viewController: viewController)
+    }
+
+    func showLogin() {
+        let viewController = LoginViewController()
+
+        pushToRoot(viewController: viewController)
+    }
+}
+
+extension AppCoordinator {
+    private func pushToRoot(viewController: UIViewController) {
+        navigationController.viewControllers.removeAll()
+        navigationController.pushViewController(
+            viewController,
+            animated: true
+        )
     }
 }

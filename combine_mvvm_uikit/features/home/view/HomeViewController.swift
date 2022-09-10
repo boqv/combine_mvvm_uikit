@@ -25,4 +25,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        viewModel.logout()
+    }
 }

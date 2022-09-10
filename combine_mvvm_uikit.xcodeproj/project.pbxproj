@@ -20,6 +20,9 @@
 		D071B7FD28CCFA76005F68DB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B7FC28CCFA76005F68DB /* AppCoordinator.swift */; };
 		D071B80328CD0B1E005F68DB /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = D071B80228CD0B1E005F68DB /* Factory */; };
 		D071B80528CD0B3F005F68DB /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B80428CD0B3F005F68DB /* Container.swift */; };
+		D071B80728CD0F83005F68DB /* AppCoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B80628CD0F83005F68DB /* AppCoordinatorState.swift */; };
+		D071B80C28CD10F2005F68DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B80A28CD10F2005F68DB /* LoginViewController.swift */; };
+		D071B80D28CD10F2005F68DB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D071B80B28CD10F2005F68DB /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		D071B7FA28CCF7F5005F68DB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D071B7FC28CCFA76005F68DB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D071B80428CD0B3F005F68DB /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		D071B80628CD0F83005F68DB /* AppCoordinatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorState.swift; sourceTree = "<group>"; };
+		D071B80A28CD10F2005F68DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D071B80B28CD10F2005F68DB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 		D071B7F628CCF706005F68DB /* features */ = {
 			isa = PBXGroup;
 			children = (
+				D071B80828CD10C9005F68DB /* login */,
 				D071B7F728CCF719005F68DB /* home */,
 			);
 			path = features;
@@ -174,8 +181,26 @@
 			isa = PBXGroup;
 			children = (
 				D071B7FC28CCFA76005F68DB /* AppCoordinator.swift */,
+				D071B80628CD0F83005F68DB /* AppCoordinatorState.swift */,
 			);
 			path = appcoordinator;
+			sourceTree = "<group>";
+		};
+		D071B80828CD10C9005F68DB /* login */ = {
+			isa = PBXGroup;
+			children = (
+				D071B80928CD10D1005F68DB /* view */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		D071B80928CD10D1005F68DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D071B80A28CD10F2005F68DB /* LoginViewController.swift */,
+				D071B80B28CD10F2005F68DB /* LoginViewController.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D071B80D28CD10F2005F68DB /* LoginViewController.xib in Resources */,
 				D071B7CF28CCF465005F68DB /* LaunchScreen.storyboard in Resources */,
 				D071B7CC28CCF465005F68DB /* Assets.xcassets in Resources */,
 				D071B7F528CCF6F0005F68DB /* HomeViewController.xib in Resources */,
@@ -315,9 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D071B80728CD0F83005F68DB /* AppCoordinatorState.swift in Sources */,
 				D071B7C328CCF461005F68DB /* AppDelegate.swift in Sources */,
 				D071B80528CD0B3F005F68DB /* Container.swift in Sources */,
 				D071B7C528CCF461005F68DB /* SceneDelegate.swift in Sources */,
+				D071B80C28CD10F2005F68DB /* LoginViewController.swift in Sources */,
 				D071B7FD28CCFA76005F68DB /* AppCoordinator.swift in Sources */,
 				D071B7F428CCF6F0005F68DB /* HomeViewController.swift in Sources */,
 				D071B7FB28CCF7F5005F68DB /* HomeViewModel.swift in Sources */,

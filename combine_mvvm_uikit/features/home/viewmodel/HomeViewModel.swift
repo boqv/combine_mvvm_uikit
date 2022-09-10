@@ -11,4 +11,8 @@ import Factory
 
 class HomeViewModel {
     private let appCoordinator = Container.appCoordinator()
+
+    func logout() {
+        appCoordinator.navigate(.login)
+    }
 }
