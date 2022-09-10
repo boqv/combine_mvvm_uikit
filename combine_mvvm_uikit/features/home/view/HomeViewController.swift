@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import Combine
+import Factory
 
 class HomeViewController: UIViewController {
-    private let viewModel: HomeViewModel
+    private let viewModel: HomeViewModel = Container.homeViewModel()
 
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
+    var cancellables = Set<AnyCancellable>()
 
+    init() {
         super.init(nibName: String(describing: HomeViewController.self), bundle: .main)
     }
     
@@ -23,5 +25,4 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }

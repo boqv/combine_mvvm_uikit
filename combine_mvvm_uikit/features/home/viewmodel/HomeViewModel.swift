@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Combine
+import Factory
 
 class HomeViewModel {
-    
+    private let appCoordinator = Container.appCoordinator()
 }

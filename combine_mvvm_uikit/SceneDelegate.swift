@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Factory
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -21,9 +22,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
 
-        let viewModel = HomeViewModel()
-        let viewController = HomeViewController(viewModel: viewModel)
-        window?.rootViewController = viewController
+        //let viewModel = HomeViewModel(coordinator: coordinator)
+        //let viewController = HomeViewController(viewModel: viewModel)
+
+        let coordinator = Container.appCoordinator()
+        coordinator.showInitial()
+
+        let navigationController = Container.navigationController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 
@@ -54,7 +60,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
