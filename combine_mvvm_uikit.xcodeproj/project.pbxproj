@@ -23,6 +23,10 @@
 		D071B80728CD0F83005F68DB /* AppCoordinatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B80628CD0F83005F68DB /* AppCoordinatorState.swift */; };
 		D071B80C28CD10F2005F68DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B80A28CD10F2005F68DB /* LoginViewController.swift */; };
 		D071B80D28CD10F2005F68DB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D071B80B28CD10F2005F68DB /* LoginViewController.xib */; };
+		D071B81428CD2FAB005F68DB /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B81328CD2FAB005F68DB /* AuthenticationService.swift */; };
+		D071B81628CD3245005F68DB /* AuthenticationServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B81528CD3245005F68DB /* AuthenticationServiceError.swift */; };
+		D071B81928CD332C005F68DB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B81828CD332C005F68DB /* LoginViewModel.swift */; };
+		D071B81C28CD42CA005F68DB /* UITextField+textPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B81B28CD42CA005F68DB /* UITextField+textPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		D071B80628CD0F83005F68DB /* AppCoordinatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorState.swift; sourceTree = "<group>"; };
 		D071B80A28CD10F2005F68DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D071B80B28CD10F2005F68DB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D071B81328CD2FAB005F68DB /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		D071B81528CD3245005F68DB /* AuthenticationServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceError.swift; sourceTree = "<group>"; };
+		D071B81828CD332C005F68DB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D071B81B28CD42CA005F68DB /* UITextField+textPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+textPublisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,8 @@
 		D071B7C128CCF461005F68DB /* combine_mvvm_uikit */ = {
 			isa = PBXGroup;
 			children = (
+				D071B81A28CD42B0005F68DB /* extensions */,
+				D071B81228CD2F93005F68DB /* authentication */,
 				D071B7FE28CCFB0A005F68DB /* appcoordinator */,
 				D071B7F628CCF706005F68DB /* features */,
 				D071B7C228CCF461005F68DB /* AppDelegate.swift */,
@@ -189,6 +199,7 @@
 		D071B80828CD10C9005F68DB /* login */ = {
 			isa = PBXGroup;
 			children = (
+				D071B81728CD331D005F68DB /* viewmodel */,
 				D071B80928CD10D1005F68DB /* view */,
 			);
 			path = login;
@@ -201,6 +212,31 @@
 				D071B80B28CD10F2005F68DB /* LoginViewController.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		D071B81228CD2F93005F68DB /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D071B81328CD2FAB005F68DB /* AuthenticationService.swift */,
+				D071B81528CD3245005F68DB /* AuthenticationServiceError.swift */,
+			);
+			path = authentication;
+			sourceTree = "<group>";
+		};
+		D071B81728CD331D005F68DB /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				D071B81828CD332C005F68DB /* LoginViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		D071B81A28CD42B0005F68DB /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D071B81B28CD42CA005F68DB /* UITextField+textPublisher.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,9 +377,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D071B81628CD3245005F68DB /* AuthenticationServiceError.swift in Sources */,
 				D071B80728CD0F83005F68DB /* AppCoordinatorState.swift in Sources */,
+				D071B81928CD332C005F68DB /* LoginViewModel.swift in Sources */,
+				D071B81C28CD42CA005F68DB /* UITextField+textPublisher.swift in Sources */,
 				D071B7C328CCF461005F68DB /* AppDelegate.swift in Sources */,
 				D071B80528CD0B3F005F68DB /* Container.swift in Sources */,
+				D071B81428CD2FAB005F68DB /* AuthenticationService.swift in Sources */,
 				D071B7C528CCF461005F68DB /* SceneDelegate.swift in Sources */,
 				D071B80C28CD10F2005F68DB /* LoginViewController.swift in Sources */,
 				D071B7FD28CCFA76005F68DB /* AppCoordinator.swift in Sources */,

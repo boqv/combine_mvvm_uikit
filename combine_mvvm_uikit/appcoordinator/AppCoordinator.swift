@@ -13,8 +13,6 @@ import Factory
 class AppCoordinator {
     let navigationController = Container.navigationController()
 
-    private var cancellables = Set<AnyCancellable>()
-
     func navigate(_ state: AppCoordinatorState) {
         switch state {
         case .login:

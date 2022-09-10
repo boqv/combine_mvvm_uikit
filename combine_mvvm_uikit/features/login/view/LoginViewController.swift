@@ -7,9 +7,15 @@
 
 import UIKit
 import Factory
+import Combine
 
 class LoginViewController: UIViewController {
-    private let coordinator = Container.appCoordinator()
+    private let viewModel = Container.loginViewModel()
+
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var usernameTextField: UITextField!
+
+    private var cancellables = Set<AnyCancellable>()
 
     init() {
         super.init(nibName: String(describing: LoginViewController.self), bundle: .main)
@@ -21,9 +27,27 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        bindUserInterfaceToViewModel()
+    }
+
+    private func bindUserInterfaceToViewModel() {
+        usernameTextField
+            .publisher(for: \.text)
+            .assign(to: \.value, on: viewModel.username)
+            .store(in: &cancellables)
+
+        passwordTextField
+            .publisher(for: \.text)
+            .assign(to: \.value, on: viewModel.password)
+            .store(in: &cancellables)
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
-        coordinator.navigate(.home)
+        view.endEditing(true)
+
+        Task {
+            await viewModel.login()
+        }
     }
 }

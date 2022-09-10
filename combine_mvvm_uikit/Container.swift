@@ -15,6 +15,13 @@ extension Container {
     }
     static let appCoordinator = Factory<AppCoordinator>(scope: .singleton){ AppCoordinator() }
 
+    // services
+    static let authenticationService = Factory<AuthenticationServiceType>(scope: .singleton) {
+        AuthenticationService()
+    }
+
     // view models
     static let homeViewModel = Factory<HomeViewModel>{ HomeViewModel() }
+    static let loginViewModel = Factory<LoginViewModel> { LoginViewModel()
+    }
 }
