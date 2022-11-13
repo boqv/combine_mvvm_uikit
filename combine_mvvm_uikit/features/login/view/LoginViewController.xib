@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="combine_mvvm_uikit" customModuleProvider="target">
             <connections>
+                <outlet property="loginButton" destination="nbG-2Q-0Hx" id="CkK-aa-uBP"/>
                 <outlet property="passwordTextField" destination="GJP-Ty-stp" id="pkQ-yH-3pn"/>
                 <outlet property="usernameTextField" destination="Sdf-1o-P5J" id="GOH-qI-4B8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

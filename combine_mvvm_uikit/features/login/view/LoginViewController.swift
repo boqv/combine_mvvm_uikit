@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -28,18 +29,24 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindUserInterfaceToViewModel()
+        observeUserInterface()
+        observeViewModel()
     }
 
-    private func bindUserInterfaceToViewModel() {
-        usernameTextField
-            .publisher(for: \.text)
+    private func observeUserInterface() {
+        usernameTextField.textPublisher
             .assign(to: \.value, on: viewModel.username)
             .store(in: &cancellables)
 
-        passwordTextField
-            .publisher(for: \.text)
+        passwordTextField.textPublisher
             .assign(to: \.value, on: viewModel.password)
+            .store(in: &cancellables)
+    }
+
+    private func observeViewModel() {
+        viewModel.shouldEnableLogin
+            .receive(on: RunLoop.main)
+            .assign(to: \.isEnabled, on: loginButton)
             .store(in: &cancellables)
     }
 

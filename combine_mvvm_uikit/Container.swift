@@ -10,18 +10,23 @@ import Factory
 import UIKit
 
 extension Container {
-    static let navigationController = Factory<UINavigationController>(scope: .singleton) {
+    static let navigationController = Factory<UINavigationController>(
+        scope: .singleton
+    ) {
         UINavigationController()
     }
-    static let appCoordinator = Factory<AppCoordinator>(scope: .singleton){ AppCoordinator() }
+    static let appCoordinator = Factory<AppCoordinator>(scope: .singleton){
+        AppCoordinator()
+    }
 
     // services
-    static let authenticationService = Factory<AuthenticationServiceType>(scope: .singleton) {
+    static let authenticationService = Factory<AuthenticationServiceType>(
+        scope: .singleton
+    ) {
         AuthenticationService()
     }
 
     // view models
     static let homeViewModel = Factory<HomeViewModel>{ HomeViewModel() }
-    static let loginViewModel = Factory<LoginViewModel> { LoginViewModel()
-    }
+    static let loginViewModel = Factory<LoginViewModel> { LoginViewModel() }
 }

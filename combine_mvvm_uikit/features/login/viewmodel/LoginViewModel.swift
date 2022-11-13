@@ -33,3 +33,16 @@ class LoginViewModel {
         }
     }
 }
+
+extension LoginViewModel {
+    var shouldEnableLogin: AnyPublisher<Bool, Never> {
+        return Publishers.CombineLatest(username, password)
+            .map { username, password in
+                guard let username = username, let password = password else {
+                    return false
+                }
+
+                return !username.isEmpty && !password.isEmpty
+            }.eraseToAnyPublisher()
+    }
+}
