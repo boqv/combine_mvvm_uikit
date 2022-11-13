@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01B36CA2921255B00CC3DC3 /* LoginViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B36C92921255B00CC3DC3 /* LoginViewAction.swift */; };
 		D071B7C328CCF461005F68DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B7C228CCF461005F68DB /* AppDelegate.swift */; };
 		D071B7C528CCF461005F68DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B7C428CCF461005F68DB /* SceneDelegate.swift */; };
 		D071B7CC28CCF465005F68DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D071B7CB28CCF465005F68DB /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D01B36C92921255B00CC3DC3 /* LoginViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewAction.swift; sourceTree = "<group>"; };
 		D071B7BF28CCF461005F68DB /* combine_mvvm_uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = combine_mvvm_uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D071B7C228CCF461005F68DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D071B7C428CCF461005F68DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				D071B80A28CD10F2005F68DB /* LoginViewController.swift */,
 				D071B80B28CD10F2005F68DB /* LoginViewController.xib */,
+				D01B36C92921255B00CC3DC3 /* LoginViewAction.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				D071B7C328CCF461005F68DB /* AppDelegate.swift in Sources */,
 				D071B80528CD0B3F005F68DB /* Container.swift in Sources */,
 				D071B81428CD2FAB005F68DB /* AuthenticationService.swift in Sources */,
+				D01B36CA2921255B00CC3DC3 /* LoginViewAction.swift in Sources */,
 				D071B7C528CCF461005F68DB /* SceneDelegate.swift in Sources */,
 				D071B80C28CD10F2005F68DB /* LoginViewController.swift in Sources */,
 				D071B7FD28CCFA76005F68DB /* AppCoordinator.swift in Sources */,

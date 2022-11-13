@@ -48,6 +48,21 @@ class LoginViewController: UIViewController {
             .receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: loginButton)
             .store(in: &cancellables)
+
+        viewModel.viewAction
+            .receive(on: RunLoop.main)
+            .sink { [weak self] viewAction in
+                self?.handle(viewAction: viewAction)
+            }
+            .store(in: &cancellables)
+    }
+
+    private func handle(viewAction: LoginViewAction) {
+        switch viewAction {
+
+        case .invalidUsernameOrPassword:
+            viewAction.ok(viewController: self)
+        }
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {

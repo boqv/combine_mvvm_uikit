@@ -16,6 +16,8 @@ class LoginViewModel {
     let username = CurrentValueSubject<String?, Never>("")
     let password = CurrentValueSubject<String?, Never>("")
 
+    let viewAction = PassthroughSubject<LoginViewAction, Never>()
+
     func login() async {
         let result = await authenticationService.authorize(
             username: username.value ?? "",
@@ -30,6 +32,7 @@ class LoginViewModel {
 
         case .failure(let error):
             print(error.localizedDescription)
+            viewAction.send(.invalidUsernameOrPassword)
         }
     }
 }
