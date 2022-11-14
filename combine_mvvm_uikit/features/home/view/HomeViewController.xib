@@ -25,7 +25,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXW-wh-3Q8">
-                    <rect key="frame" x="172" y="815" width="70" height="31"/>
+                    <rect key="frame" x="172" y="97" width="70" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Logout"/>
                     <connections>
@@ -36,8 +36,8 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FXW-wh-3Q8" secondAttribute="bottom" constant="16" id="8HA-1G-Xro"/>
                 <constraint firstItem="0fi-GU-dtf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8TY-7i-zah"/>
+                <constraint firstItem="FXW-wh-3Q8" firstAttribute="top" secondItem="0fi-GU-dtf" secondAttribute="bottom" constant="16" id="bWQ-HQ-B7z"/>
                 <constraint firstItem="0fi-GU-dtf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="gcR-4e-Yq9"/>
                 <constraint firstItem="FXW-wh-3Q8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qNi-m0-3xi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0fi-GU-dtf" secondAttribute="trailing" constant="16" id="w2b-gm-jBw"/>

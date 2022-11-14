@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D01B36CA2921255B00CC3DC3 /* LoginViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B36C92921255B00CC3DC3 /* LoginViewAction.swift */; };
+		D01B36D22922BFB300CC3DC3 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B36D02922BFB300CC3DC3 /* NewsViewController.swift */; };
+		D01B36D32922BFB300CC3DC3 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01B36D12922BFB300CC3DC3 /* NewsViewController.xib */; };
+		D01B36D72922C08B00CC3DC3 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B36D52922C08B00CC3DC3 /* NotesViewController.swift */; };
+		D01B36D82922C08B00CC3DC3 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01B36D62922C08B00CC3DC3 /* NotesViewController.xib */; };
 		D071B7C328CCF461005F68DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B7C228CCF461005F68DB /* AppDelegate.swift */; };
 		D071B7C528CCF461005F68DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071B7C428CCF461005F68DB /* SceneDelegate.swift */; };
 		D071B7CC28CCF465005F68DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D071B7CB28CCF465005F68DB /* Assets.xcassets */; };
@@ -49,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		D01B36C92921255B00CC3DC3 /* LoginViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewAction.swift; sourceTree = "<group>"; };
+		D01B36D02922BFB300CC3DC3 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		D01B36D12922BFB300CC3DC3 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		D01B36D52922C08B00CC3DC3 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		D01B36D62922C08B00CC3DC3 /* NotesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
 		D071B7BF28CCF461005F68DB /* combine_mvvm_uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = combine_mvvm_uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D071B7C228CCF461005F68DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D071B7C428CCF461005F68DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D01B36CF2922BF8000CC3DC3 /* news */ = {
+			isa = PBXGroup;
+			children = (
+				D01B36D02922BFB300CC3DC3 /* NewsViewController.swift */,
+				D01B36D12922BFB300CC3DC3 /* NewsViewController.xib */,
+			);
+			path = news;
+			sourceTree = "<group>";
+		};
+		D01B36D42922C05500CC3DC3 /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				D01B36D52922C08B00CC3DC3 /* NotesViewController.swift */,
+				D01B36D62922C08B00CC3DC3 /* NotesViewController.xib */,
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
 		D071B7B628CCF461005F68DB = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +183,8 @@
 		D071B7F628CCF706005F68DB /* features */ = {
 			isa = PBXGroup;
 			children = (
+				D01B36D42922C05500CC3DC3 /* notes */,
+				D01B36CF2922BF8000CC3DC3 /* news */,
 				D071B80828CD10C9005F68DB /* login */,
 				D071B7F728CCF719005F68DB /* home */,
 			);
@@ -354,6 +382,8 @@
 			files = (
 				D071B80D28CD10F2005F68DB /* LoginViewController.xib in Resources */,
 				D071B7CF28CCF465005F68DB /* LaunchScreen.storyboard in Resources */,
+				D01B36D82922C08B00CC3DC3 /* NotesViewController.xib in Resources */,
+				D01B36D32922BFB300CC3DC3 /* NewsViewController.xib in Resources */,
 				D071B7CC28CCF465005F68DB /* Assets.xcassets in Resources */,
 				D071B7F528CCF6F0005F68DB /* HomeViewController.xib in Resources */,
 			);
@@ -391,6 +421,8 @@
 				D071B7C528CCF461005F68DB /* SceneDelegate.swift in Sources */,
 				D071B80C28CD10F2005F68DB /* LoginViewController.swift in Sources */,
 				D071B7FD28CCFA76005F68DB /* AppCoordinator.swift in Sources */,
+				D01B36D72922C08B00CC3DC3 /* NotesViewController.swift in Sources */,
+				D01B36D22922BFB300CC3DC3 /* NewsViewController.swift in Sources */,
 				D071B7F428CCF6F0005F68DB /* HomeViewController.swift in Sources */,
 				D071B7FB28CCF7F5005F68DB /* HomeViewModel.swift in Sources */,
 			);

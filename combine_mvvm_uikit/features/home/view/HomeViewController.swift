@@ -9,7 +9,7 @@ import UIKit
 import Combine
 import Factory
 
-class HomeViewController: UIViewController {
+class HomeViewController: UITabBarController {
     private let viewModel: HomeViewModel = Container.homeViewModel()
 
     var cancellables = Set<AnyCancellable>()
@@ -24,10 +24,42 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureUserInterface()
     }
 
+    private func configureUserInterface() {
+        configureTabbar()
+    }
+
+    private func configureTabbar() {
+        delegate = self
+
+        let newsTabBarItem = UITabBarItem(
+            tabBarSystemItem: .featured,
+            tag: 0
+        )
+        let noteTabBarItem = UITabBarItem(
+            tabBarSystemItem: .history,
+            tag: 1
+        )
+        let newsViewController = NewsViewController()
+        newsViewController.tabBarItem = newsTabBarItem
+
+        let notesViewController = NotesViewController()
+        notesViewController.tabBarItem = noteTabBarItem
+
+        viewControllers = [
+            newsViewController,
+            notesViewController
+        ]
+    }
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
         viewModel.logout()
     }
+}
+
+extension HomeViewController: UITabBarControllerDelegate {
+
 }
