@@ -29,4 +29,9 @@ extension Container {
     // view models
     static let homeViewModel = Factory<HomeViewModel>{ HomeViewModel() }
     static let loginViewModel = Factory<LoginViewModel> { LoginViewModel() }
+
+    // utils
+    static let keyValueStore = Factory<KeyValueStoreType> {
+        KeyValueStore()
+    }
 }

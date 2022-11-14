@@ -12,6 +12,7 @@ import Combine
 class LoginViewModel {
     private let authenticationService = Container.authenticationService()
     private let coordinator = Container.appCoordinator()
+    private let keyValueStore = Container.keyValueStore()
 
     let username = CurrentValueSubject<String?, Never>("")
     let password = CurrentValueSubject<String?, Never>("")
@@ -28,6 +29,7 @@ class LoginViewModel {
 
         case .success(let token):
             print(token)
+            keyValueStore.token = token
             coordinator.navigate(.home)
 
         case .failure(let error):

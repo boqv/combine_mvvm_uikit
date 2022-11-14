@@ -11,7 +11,8 @@ import UIKit
 import Factory
 
 class AppCoordinator {
-    let navigationController = Container.navigationController()
+    private let navigationController = Container.navigationController()
+    private let keyValueStore = Container.keyValueStore()
 
     func navigate(_ state: AppCoordinatorState) {
         switch state {
@@ -20,6 +21,15 @@ class AppCoordinator {
         case .home:
             showHome()
         }
+    }
+
+    func showIntial() {
+        guard keyValueStore.token != nil else {
+            showLogin()
+            return
+        }
+
+        showHome()
     }
 
     private func showHome() {
